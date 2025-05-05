@@ -1,0 +1,23 @@
+[application]
+out_dir = "docs"
+
+[web.app]
+base_path = "durant42040.github.io"
+
+# HTML title tag content
+title = "personal-website"
+
+# include `assets` in web platform
+[web.resource]
+
+# Additional CSS style files
+style = []
+
+# Additional JavaScript files
+script = []
+
+[web.resource.dev]
+
+# Javascript code file
+# serve: [dev-server] only
+script = []
