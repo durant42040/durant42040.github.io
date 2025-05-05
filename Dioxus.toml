@@ -1,8 +1,7 @@
 [application]
-out_dir = "docs"
+out_dir = "dist"
 
 [web.app]
-base_path = "durant42040.github.io"
 
 # HTML title tag content
 title = "personal-website"
