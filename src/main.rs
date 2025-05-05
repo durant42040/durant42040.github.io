@@ -6,5 +6,5 @@ fn main() {
 
 #[component]
 fn App() -> Element {
-    rsx! { "dog" }
+    rsx! { "hello" }
 }
