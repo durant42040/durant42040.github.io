@@ -1,72 +1,75 @@
 /* App-wide styling */
-body {
-    background-color: #0f1116;
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px;
+* {
+    color: #4d5562;  /* A balanced grey color that's easy on the eyes */
 }
 
-#hero {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+
+p {
+    font-family: Inter var,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    width: 100%;
+    margin-right: 1rem;
+}
+
+h1 {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.profile {
+    width: 18rem;
+    border-radius: 1rem;
+    margin-left: 3rem;
+    margin-right: -2.5rem;
+    margin-top: 2rem;
+}
+
+#about {
+    margin-left: 4rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 700px) {
+    img {
+        display: none;
+    }
+}
+
+.sep {
+    width: 2rem;
+    height: 2rem;
+}
+
+.info {
+    margin-left: 3rem;
+    padding-top: 1rem;
+}
+
+#cv {
+    justify-content: space-around;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.github {
+    margin: auto;
+    position: relative;
+    top: -0.4rem;
+}
+
+#mail {
+    height: 1rem;
     justify-content: center;
-    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    top: -0.2rem;
 }
 
-#links {
-    width: 400px;
-    text-align: left;
-    font-size: x-large;
-    color: white;
-    display: flex;
-    flex-direction: column;
+#mail-text {
+    margin-top: 0;
+    font-weight: 600;
+    text-align: center;
+    width: 60%;
+    font-size: 0.9rem;
 }
-
-#links a {
-    color: white;
-    text-decoration: none;
-    margin-top: 20px;
-    margin: 10px 0px;
-    border: white 1px solid;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-#links a:hover {
-    background-color: #1f1f1f;
-    cursor: pointer;
-}
-
-#header {
-    max-width: 1200px;
-}
-
-/* Navbar */
-#navbar {
-    display: flex;
-    flex-direction: row;
-  }
-  
-#navbar a {
-    color: #ffffff;
-    margin-right: 20px;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-#navbar a:hover {
-    cursor: pointer;
-    color: #91a4d2;
-}
-
-/* Blog page */
-#blog {
-    margin-top: 50px;
-  }
-  
-#blog a {
-    color: #ffffff;
-    margin-top: 50px;
-}
-
