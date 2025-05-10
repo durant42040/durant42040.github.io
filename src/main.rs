@@ -1,35 +1,47 @@
 use dioxus::prelude::*;
+use dioxus::prelude::NavigationTarget::External;
 
 fn main() {
     dioxus::launch(App);
 }
 
-
 #[component]
 fn App() -> Element {
     rsx! {
-        div {
-            id: "about",
-            class: "flex flex-row",
-            div {
-                h1 {
-                    "Ryan Hsiang" 
-                }
-                About {}
-            }
-            div {
+        Intro {}
+        Projects {}
+        document::Stylesheet { href: asset!("assets/main.css") }
+        document::Stylesheet { href: asset!("assets/tailwind.css") }
+    }
+}
+
+#[component]
+fn Intro() -> Element {
+    rsx! {
+        div { id: "name",
+            h1 { "Ryan Hsiang" }
+            h2 { "項達均" }
+        }
+        div { id: "about",
+            div { id: "left", About {} }
+            div { id: "right",
                 img {
                     class: "profile",
-                    src: asset!("assets/profile.png"),
-                    alt: "Profile picture", 
+                    src: asset!("assets/images/profile.png"),
+                    alt: "Profile picture",
                 }
                 Info {}
             }
         }
-        document::Stylesheet {
-            href: asset!("assets/main.css"),
+    }
+}
+
+#[component]
+fn Projects() -> Element {
+    rsx! {
+        div { id: "projects",
+            h2 { "Projects" }
         }
-        document::Stylesheet { href: asset!("assets/tailwind.css") }
     }
 }
 
@@ -38,14 +50,49 @@ fn About() -> Element {
     rsx! {
         div { class: "about",
             p {
-                "I am Ryan Hsiang (項達均), a junior from National Taiwan University (NTU) majoring in Electrical Engineering.
-                My research interests lie in machine learning and its applications to physics, mathematics, and engineering. In the summer of 2025, I will be participating in the Summer Undergraduate Research Fellowship (SURF) at Caltech,
-                under the guidance of Prof. Anima Anandkumar."
+                "I am Ryan Hsiang, a junior from "
+                a {
+                    style: "text-decoration: none;",
+                    href: "https://www.ntu.edu.tw/",
+                    "National Taiwan University"
+                }
+                ", (NTU) majoring in Electrical Engineering.
+                My research interests lie in machine learning and its applications to physics, mathematics, and engineering. In the summer of 2025, I will be participating in the "
+                a {
+                    style: "text-decoration: none;",
+                    href: "https://sfp.caltech.edu/undergraduate-research/programs/surf",
+                    "Summer Undergraduate Research Fellowship"
+                },
+                " (SURF) at "
+                a {
+                    style: "text-decoration: none;",
+                    href: "https://www.caltech.edu/",
+                    "Caltech"
+                }
+                ",
+                under the guidance of Prof. ",
+                a {
+                    style: "text-decoration: none;",
+                    href: "https://tensorlab.cms.caltech.edu/users/anima/index.html",
+                    "Anima Anandkumar"
+                }, " and Dr. ",
+                a {
+                    style: "text-decoration: none;",
+                    href: "https://www.robertj1.com",
+                    "Robert Joseph"
+                },
+                 "."
             }
 
             p { class: "text-lg text-gray-700 leading-relaxed",
                 "Outside of research, I have extensive experience in software development through various side projects and courses. 
-                In particular, I am familiar with programming in Rust. In fact, this website is written in Rust."
+                In particular, I led a group of students at NTUEE to develop the "
+                a {
+                    style: "text-decoration: none;",
+                    href: "https://github.com/NTUEELightDance/LightDance-Editor",
+                    "LightDance Editor"
+                }
+                ", a full-stack web application for light and dance choreography."
             }
         }
     }
@@ -54,42 +101,32 @@ fn About() -> Element {
 #[component]
 fn Info() -> Element {
     rsx! {
-        div {
-            class: "info",
-            div {
-                class: "flex flex-row",
-                id: "cv",
+        div { class: "info",
+            div { class: "flex flex-row", id: "cv",
                 a {
                     img {
-                        src: asset!("assets/cv.png"),
+                        src: asset!("assets/icons/cv.png"),
                         alt: "cv",
-                        style: "width: 25px;"
+                        style: "width: 22px;",
                     }
                 }
-                div { class: "sep" }
-                a {
-                    href: "https://github.com/durant42040",
+                a { href: "https://github.com/durant42040",
                     img {
                         class: "github",
-                        src: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+                        src: asset!("assets/icons/github.png"),
                         alt: "GitHub",
-                        style: "width: 25px;"
+                        style: "width: 18px;",
                     }
                 }
             }
-            a {
-                href: "mailto:rhsiang@caltech.edu",
-                class: "flex flex-row",
-                id: "mail",
+            div { class: "flex flex-row", id: "mail",
                 img {
-                    src: asset!("assets/mail.png"),
+                    id: "mail-icon",
+                    src: asset!("assets/icons/mail.png"),
                     alt: "mail",
-                    style: "width: 18px;"
+                    style: "width: 18px;",
                 }
-                p {
-                    id: "mail-text",
-                    "rhsiang@caltech.edu"
-                }
+                p { id: "mail-text", "rhsiang@caltech.edu" }
             }
         }
     }

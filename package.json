@@ -6,3 +6,4 @@
     "build:css": "tailwindcss -i ./src/input.css -o ./assets/tailwind.css --watch"
   }
 }
+ 
