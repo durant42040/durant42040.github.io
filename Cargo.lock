@@ -1112,6 +1112,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "dioxus-primitives"
+version = "0.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "46a08d83c401817f60449ff4522763077fd1149f89847af5ea18d4386f022e8c"
+
+[[package]]
 name = "dioxus-router"
 version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3043,6 +3049,7 @@ name = "personal-website"
 version = "0.1.0"
 dependencies = [
  "dioxus",
+ "dioxus-primitives",
 ]
 
 [[package]]

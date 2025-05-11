@@ -1,133 +1,31 @@
 use dioxus::prelude::*;
-use dioxus::prelude::NavigationTarget::External;
+mod components;
 
-fn main() {
-    dioxus::launch(App);
+#[derive(Routable, Clone)]
+enum Route {
+    // The home page is at the / route
+    #[route("/")]
+    Home {},
+}
+
+#[component]
+fn Home() -> Element {
+    rsx! {
+        div { class: "container",
+            components::Intro {}
+            components::Projects {}
+        }
+        document::Stylesheet { href: asset!("assets/main.css") }
+    }
 }
 
 #[component]
 fn App() -> Element {
     rsx! {
-        Intro {}
-        Projects {}
-        document::Stylesheet { href: asset!("assets/main.css") }
-        document::Stylesheet { href: asset!("assets/tailwind.css") }
+        Router::<Route> {}
     }
 }
 
-#[component]
-fn Intro() -> Element {
-    rsx! {
-        div { id: "name",
-            h1 { "Ryan Hsiang" }
-            h2 { "項達均" }
-        }
-        div { id: "about",
-            div { id: "left", About {} }
-            div { id: "right",
-                img {
-                    class: "profile",
-                    src: asset!("assets/images/profile.png"),
-                    alt: "Profile picture",
-                }
-                Info {}
-            }
-        }
-    }
-}
-
-#[component]
-fn Projects() -> Element {
-    rsx! {
-        div { id: "projects",
-            h2 { "Projects" }
-        }
-    }
-}
-
-#[component]
-fn About() -> Element {
-    rsx! {
-        div { class: "about",
-            p {
-                "I am Ryan Hsiang, a junior from "
-                a {
-                    style: "text-decoration: none;",
-                    href: "https://www.ntu.edu.tw/",
-                    "National Taiwan University"
-                }
-                ", (NTU) majoring in Electrical Engineering.
-                My research interests lie in machine learning and its applications to physics, mathematics, and engineering. In the summer of 2025, I will be participating in the "
-                a {
-                    style: "text-decoration: none;",
-                    href: "https://sfp.caltech.edu/undergraduate-research/programs/surf",
-                    "Summer Undergraduate Research Fellowship"
-                },
-                " (SURF) at "
-                a {
-                    style: "text-decoration: none;",
-                    href: "https://www.caltech.edu/",
-                    "Caltech"
-                }
-                ",
-                under the guidance of Prof. ",
-                a {
-                    style: "text-decoration: none;",
-                    href: "https://tensorlab.cms.caltech.edu/users/anima/index.html",
-                    "Anima Anandkumar"
-                }, " and Dr. ",
-                a {
-                    style: "text-decoration: none;",
-                    href: "https://www.robertj1.com",
-                    "Robert Joseph"
-                },
-                 "."
-            }
-
-            p { class: "text-lg text-gray-700 leading-relaxed",
-                "Outside of research, I have extensive experience in software development through various side projects and courses. 
-                In particular, I led a group of students at NTUEE to develop the "
-                a {
-                    style: "text-decoration: none;",
-                    href: "https://github.com/NTUEELightDance/LightDance-Editor",
-                    "LightDance Editor"
-                }
-                ", a full-stack web application for light and dance choreography."
-            }
-        }
-    }
-}
-
-#[component]
-fn Info() -> Element {
-    rsx! {
-        div { class: "info",
-            div { class: "flex flex-row", id: "cv",
-                a {
-                    img {
-                        src: asset!("assets/icons/cv.png"),
-                        alt: "cv",
-                        style: "width: 22px;",
-                    }
-                }
-                a { href: "https://github.com/durant42040",
-                    img {
-                        class: "github",
-                        src: asset!("assets/icons/github.png"),
-                        alt: "GitHub",
-                        style: "width: 18px;",
-                    }
-                }
-            }
-            div { class: "flex flex-row", id: "mail",
-                img {
-                    id: "mail-icon",
-                    src: asset!("assets/icons/mail.png"),
-                    alt: "mail",
-                    style: "width: 18px;",
-                }
-                p { id: "mail-text", "rhsiang@caltech.edu" }
-            }
-        }
-    }
+fn main() {
+    dioxus::launch(App);
 }
