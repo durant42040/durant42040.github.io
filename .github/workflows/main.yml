@@ -9,8 +9,11 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: "Copy Files"
+        run: |
+          mkdir -p target/dx/personal-website/release/web/public/
+          cp assets/documents/* target/dx/personal-website/release/web/public/
       - name: "Dioxus Deploy"
         uses: DioxusLabs/deploy-action@0.1.2
         with:
           outDirectory: "target/dx/personal-website/release/web/public"
-        

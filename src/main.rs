@@ -3,7 +3,6 @@ mod components;
 
 #[derive(Routable, Clone)]
 enum Route {
-    // The home page is at the / route
     #[route("/")]
     Home {},
 }
@@ -11,11 +10,11 @@ enum Route {
 #[component]
 fn Home() -> Element {
     rsx! {
+        document::Stylesheet { href: asset!("assets/main.css") }
         div { class: "container",
             components::Intro {}
             components::Projects {}
         }
-        document::Stylesheet { href: asset!("assets/main.css") }
     }
 }
 

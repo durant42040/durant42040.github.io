@@ -117,12 +117,22 @@ h4 {
     margin: auto;
     position: relative;
     bottom: 0.1rem;
+    transition: transform 0.2s ease;
+}
+
+.github:hover {
+    transform: scale(1.1);
 }
 
 .linkedin {
     margin: auto;
     position: relative;
     bottom: 0.1rem;
+    transition: transform 0.2s ease;
+}
+
+.linkedin:hover {
+    transform: scale(1.1);
 }
 
 #mail {
@@ -133,6 +143,11 @@ h4 {
     display: flex;
     flex-direction: row;
     left: -1rem;
+    transition: transform 0.2s ease;
+}
+
+#mail:hover {
+    transform: scale(1.05);
 }
 
 #mail-text {
@@ -148,6 +163,22 @@ h4 {
 
 #mail-icon {
     position: relative;
+}
+
+#cv {
+    transition: transform 0.2s ease;
+}
+
+#cv:hover {
+    transform: scale(1.2);
+}
+
+.project-link {
+    transition: transform 0.2s ease;
+}
+
+.project-link:hover {
+    transform: scale(1.1);
 }
 
 #projects {

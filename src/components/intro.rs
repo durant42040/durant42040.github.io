@@ -75,8 +75,7 @@ fn About() -> Element {
 fn Info() -> Element {
     rsx! {
         div { class: "info",
-            a { 
-                href: "/cv.pdf",
+            a { id: "cv", href: "/cv.pdf",
                 img {
                     src: asset!("assets/icons/cv.png"),
                     alt: "cv",
