@@ -58,7 +58,7 @@ fn About() -> Element {
             }
 
             p { class: "text-lg text-gray-700 leading-relaxed",
-                "Outside of research, I have extensive experience in software development through various side projects and courses. 
+                "Outside of research, I have extensive experience in software development through various side projects and courses.
                 In particular, I led a group of students at NTUEE to develop the "
                 a {
                     style: "text-decoration: none;",

@@ -16,7 +16,7 @@ pub fn Projects() -> Element {
             h3 { id: "projects-title", "Projects" }
             Project {
                 title: "NTUEE Light Dance".to_string(),
-                description: "Developed a full-stack web application using Rust, Blender, and MySQL to design and 
+                description: "Developed a full-stack web application using Rust, Blender, and MySQL to design and
                                                     simulate light patterns and effects for 9 dancers and 18 props. Designed LED- and fiber-embedded 
                                                     costumes for each dancer, controlled via Raspberry Pi devices connected to a WebSocket server for 
                                                     real-time synchronization. Implemented dynamic moving light effects, such as a spinning orb and 
@@ -28,7 +28,7 @@ pub fn Projects() -> Element {
             }
         }
     }
-} 
+}
 
 #[component]
 fn Project(props: ProjectProps) -> Element {

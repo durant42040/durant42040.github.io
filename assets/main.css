@@ -200,3 +200,5 @@ h4 {
     display: flex;
     overflow: hidden;
 }
+
+#overlay {display: none;}
