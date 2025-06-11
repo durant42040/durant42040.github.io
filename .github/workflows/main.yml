@@ -9,13 +9,32 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      
+      - uses: actions-rs/toolchain@v1.0.6
+        with:
+          toolchain: stable
+          profile: minimal
+          target: wasm32-unknown-unknown
+          override: true
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Install Dioxus-CLI
+        shell: bash
+        run: cargo install dioxus-cli
+  
+      - name: Build Project 🎁
+        shell: bash
+        run: cd . && dx build --release && cp ./target/dx/personal-website/release/web/public/index.html ./target/dx/personal-website/release/web/public/404.html
+
       - name: "Copy Files"
         run: |
           mkdir -p target/dx/personal-website/release/web/public/
-          cp assets/documents/* target/dx/personal-website/release/web/public/
-      - name: "Dioxus Deploy"
-        uses: DioxusLabs/deploy-action@0.1.2
+          cp ./assets/documents/* ./target/dx/personal-website/release/web/public/
+  
+      - name: Deploy Project 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
-          outDirectory: "target/dx/personal-website/release/web/public"
+          branch: gh-pages
+          folder: ./target/dx/personal-website/release/web/public
+          clean: false
