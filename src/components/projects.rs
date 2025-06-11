@@ -24,7 +24,7 @@ pub fn Projects() -> Element {
                     .to_string(),
                 github_link: "https://github.com/NTUEELightDance/LightDance-Editor".to_string(),
                 youtube_link: "https://youtu.be/5Bk3okqupsA?si=kzO6J9XcxUKLYUpy".to_string(),
-                image: asset!("assets/images/lightdance.jpg"),
+                image: asset!("assets/images/lightdance.png"),
             }
         }
     }
