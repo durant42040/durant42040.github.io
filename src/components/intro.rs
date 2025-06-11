@@ -92,7 +92,7 @@ fn Info() -> Element {
                 }
             }
             p { class: "line", "/" }
-            a { href: "https://linkedin.com/",
+            a { href: "https://www.linkedin.com/in/ryan-hsiang-1a211a2a9",
                 img {
                     class: "linkedin",
                     src: asset!("assets/icons/linkedin.png"),
