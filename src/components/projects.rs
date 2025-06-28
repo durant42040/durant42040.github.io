@@ -23,7 +23,7 @@ pub fn Projects() -> Element {
                                                                 a large energy pulse, using JavaScript."
                     .to_string(),
                 github_link: "https://github.com/NTUEELightDance/LightDance-Editor".to_string(),
-                youtube_link: "https://youtu.be/NFEkBsNKOtE?si=qoUXXUctN31mlkM1".to_string(),
+                youtube_link: "https://drive.google.com/file/d/13Mh13zdwgQuAHI1TSK-m7TzPZo8WxKoE/view?usp=sharing".to_string(),
                 image: asset!("assets/images/lightdance.png"),
             }
         }
