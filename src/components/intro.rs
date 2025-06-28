@@ -122,7 +122,7 @@ fn Profile() -> Element {
     rsx! {
         img {
             class: "profile",
-            src: asset!("assets/images/profile.jpg"),
+            src: asset!("assets/images/profile.png"),
             alt: "Profile picture",
         }
     }
