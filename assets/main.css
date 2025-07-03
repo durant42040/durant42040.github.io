@@ -189,16 +189,44 @@ h4 {
     margin-bottom: 1rem;
 }
 
+
+.project-image {
+    height: 190px;
+    border-radius: 0.5rem 0 0 0.5rem;
+    object-fit: cover;
+}
+
+
 .project {
     margin-left: 4rem;
     margin-right: 4rem;
     border: 1px solid rgb(224, 222, 222);
     border-radius: 0.5rem;
-    height: 190px;
     width: 90%;
     max-width: 1000px;
     display: flex;
-    overflow: hidden;
+}
+
+
+
+@media (max-width: 1000px) {
+    .project {
+        display: block;
+        width: 80%;
+    }
+
+    .project-image {
+        border-radius: 0.5rem 0.5rem 0 0;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 1000px) {
+    .links{
+        position: relative;
+        top: -0.5rem;
+    }
 }
 
 #overlay {display: none;}
