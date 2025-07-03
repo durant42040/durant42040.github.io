@@ -52,7 +52,7 @@ fn About() -> Element {
                 a {
                     style: "text-decoration: none;",
                     href: "https://www.robertj1.com",
-                    "Robert Joseph"
+                    "Robert Joseph George"
                 }
                 "."
             }
