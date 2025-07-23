@@ -31,7 +31,7 @@ h3 {
     font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, STXihei, sans-serif;
     font-weight: 600;
     font-size: 2rem;
-    margin-left: 4rem;
+    margin-left: 2rem;
     margin-top: 0;
 }
 
@@ -66,13 +66,13 @@ h4 {
 }
 
 #about {
-    margin-left: 4rem;
+    margin-left: 2rem;
     display: flex;
     flex-direction: row;
 }
 
 #name {
-    margin-left: 4rem;
+    margin-left: 2rem;
     margin-top: 2rem;
 }
 
@@ -198,7 +198,7 @@ h4 {
 
 
 .project {
-    margin-left: 4rem;
+    margin-left: 2rem;
     margin-right: 4rem;
     border: 1px solid rgb(224, 222, 222);
     border-radius: 0.5rem;
