@@ -103,7 +103,7 @@ fn Info() -> Element {
             p { class: "line", "/" }
             a {
                 id: "mail",
-                href: "mailto:rhsiang@caltech.edu",
+                href: "mailto:b11901040@ntu.edu.tw",
                 style: "text-decoration: none;",
                 img {
                     id: "mail-icon",
@@ -111,7 +111,7 @@ fn Info() -> Element {
                     alt: "mail",
                     style: "width: 18px;",
                 }
-                p { id: "mail-text", "rhsiang@caltech.edu" }
+                p { id: "mail-text", "b11901040@ntu.edu.tw" }
             }
         }
     }
