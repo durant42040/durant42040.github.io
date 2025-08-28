@@ -28,7 +28,7 @@ fn About() -> Element {
                     href: "https://www.ntu.edu.tw/",
                     "National Taiwan University"
                 }
-                ", (NTU) majoring in Electrical Engineering.
+                " (NTU) majoring in Electrical Engineering.
                 My research interests lie in machine learning and its applications to physics, mathematics, and engineering. In the summer of 2025, I participated in the "
                 a {
                     style: "text-decoration: none;",
