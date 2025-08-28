@@ -29,7 +29,7 @@ fn About() -> Element {
                     "National Taiwan University"
                 }
                 ", (NTU) majoring in Electrical Engineering.
-                My research interests lie in machine learning and its applications to physics, mathematics, and engineering. In the summer of 2025, I will be participating in the "
+                My research interests lie in machine learning and its applications to physics, mathematics, and engineering. In the summer of 2025, I participated in the "
                 a {
                     style: "text-decoration: none;",
                     href: "https://sfp.caltech.edu/undergraduate-research/programs/surf",
