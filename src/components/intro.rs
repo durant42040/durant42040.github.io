@@ -22,7 +22,7 @@ fn About() -> Element {
     rsx! {
         div { class: "about",
             p {
-                "I am Ryan Hsiang, a junior from "
+                "I am Ryan Hsiang, a senior from "
                 a {
                     style: "text-decoration: none;",
                     href: "https://www.ntu.edu.tw/",
