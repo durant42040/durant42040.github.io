@@ -1,4 +1,19 @@
 use dioxus::prelude::*;
+use wasm_bindgen::JsCast;
+use web_sys::HtmlElement;
+
+fn is_dark_mode() -> bool {
+    if let Some(window) = web_sys::window() {
+        if let Some(document) = window.document() {
+            if let Some(html) = document.document_element() {
+                if let Ok(html_element) = html.dyn_into::<HtmlElement>() {
+                    return html_element.class_list().contains("dark-mode");
+                }
+            }
+        }
+    }
+    false
+}
 
 #[derive(Props, PartialEq, Clone)]
 struct ProjectProps {
@@ -51,6 +66,12 @@ pub fn Publications() -> Element {
 
 #[component]
 fn Project(props: ProjectProps) -> Element {
+    let mut dark_mode = use_signal(|| false);
+    
+    use_effect(move || {
+        dark_mode.set(is_dark_mode());
+    });
+    
     rsx! {
         div { class: "project",
             img {
@@ -65,16 +86,16 @@ fn Project(props: ProjectProps) -> Element {
                     if let Some(paper_link) = &props.paper_link {
                         a { href: "{paper_link}", class: "project-link",
                             img {
-                                src: asset!("assets/icons/file.svg"),
+                                src: if dark_mode() { asset!("assets/icons/file-light.png") } else { asset!("assets/icons/file.png") },
                                 alt: "Paper",
-                                style: "width: 22px;",
+                                style: "width: 23px;",
                             }
                         }
                     }
                     if let Some(github_link) = &props.github_link {
                         a { href: "{github_link}", class: "project-link",
                             img {
-                                src: asset!("assets/icons/github.png"),
+                                src: if dark_mode() { asset!("assets/icons/github-light.png") } else { asset!("assets/icons/github.png") },
                                 alt: "GitHub",
                                 style: "width: 22px;",
                             }
@@ -83,7 +104,7 @@ fn Project(props: ProjectProps) -> Element {
                     if let Some(youtube_link) = &props.youtube_link {
                         a { href: "{youtube_link}", class: "project-link",
                             img {
-                                src: asset!("assets/icons/youtube.png"),
+                                src: if dark_mode() { asset!("assets/icons/youtube-light.png") } else { asset!("assets/icons/youtube.png") },
                                 alt: "YouTube",
                                 style: "width: 22px;",
                             }

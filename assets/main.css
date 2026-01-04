@@ -252,3 +252,57 @@ h4 {
 }
 
 #overlay {display: none;}
+
+/* Dark mode styles */
+html.dark-mode body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+html.dark-mode .container {
+    background-color: #1a1a1a;
+}
+
+html.dark-mode p {
+    color: #d0d0d0;
+}
+
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode h4 {
+    color: #e8e8e8;
+}
+
+html.dark-mode a {
+    color: #6ab7ff;
+}
+
+html.dark-mode a:hover {
+    color: #8cc8ff;
+}
+
+html.dark-mode .project {
+    border: 1px solid rgb(60, 60, 60);
+    background-color: #252525;
+}
+
+html.dark-mode .project-info {
+    color: #d0d0d0;
+}
+
+html.dark-mode .description {
+    color: #b0b0b0;
+}
+
+html.dark-mode #mail-text {
+    color: #d0d0d0;
+}
+
+html.dark-mode .line {
+    color: #b0b0b0;
+}
+
+html.dark-mode #publications .project-image {
+    background-color: white;
+}
