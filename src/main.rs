@@ -17,6 +17,7 @@ fn Home() -> Element {
         }
         div { class: "container",
             components::Intro {}
+            components::Publications {}
             components::Projects {}
         }
     }
