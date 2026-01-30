@@ -10,31 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
-      - uses: actions-rs/toolchain@v1.0.6
-        with:
-          toolchain: stable
-          profile: minimal
-          target: wasm32-unknown-unknown
-          override: true
-      - uses: Swatinem/rust-cache@v2
 
-      - name: Install Dioxus-CLI
-        shell: bash
-        run: cargo install dioxus-cli --locked
-  
-      - name: Build Project 🎁
-        shell: bash
-        run: cd . && dx build --release && cp ./target/dx/personal-website/release/web/public/index.html ./target/dx/personal-website/release/web/public/404.html
-
-      - name: "Copy Files"
+      - name: Prepare static site
         run: |
-          mkdir -p target/dx/personal-website/release/web/public/
-          cp ./assets/documents/* ./target/dx/personal-website/release/web/public/
-  
+          mkdir -p deploy
+          cp -r public/* deploy/
+          cp ./assets/documents/* deploy/
+          cp deploy/index.html deploy/404.html
+
       - name: Deploy Project 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: gh-pages
-          folder: ./target/dx/personal-website/release/web/public
+          folder: ./deploy
           clean: false

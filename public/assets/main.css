@@ -1,0 +1,321 @@
+/* App-wide styling */
+/* body {
+    background-color: #f3f1f1;
+} */
+
+.container {
+   max-width: 1200px;
+   margin: auto;
+}
+
+p {
+    font-family: Inter var,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    width: 100%;
+    font-weight: 300;
+    margin-right: 1rem;
+    color: #35393f;  
+}
+
+h1 {
+    font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, STXihei, sans-serif;
+    font-weight: 500;
+    font-size: 2.2rem;
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h3 {
+    font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, STXihei, sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-top: 0;
+}
+
+h4 {
+    font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, STXihei, sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.project-info {
+    margin-left: 1rem;
+}
+
+.description {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.links {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    position: relative;
+    bottom: -0.5rem;
+}
+
+.profile {
+    width: 18rem;
+    border-radius: 1rem;
+}
+
+#about {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#name {
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+#left {
+    width: 80%; 
+    padding-right: 3rem;
+}
+
+#right {
+    width: 40%;
+    margin-left: 3rem;
+}
+
+@media (max-width: 1000px) {
+    #about {
+        flex-direction: column-reverse;
+    }
+    #right {
+        margin: auto;
+        width: 100%;
+    }
+}
+
+
+.info {
+    width: 18rem;
+    justify-content: space-around;
+    gap: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    height: 1rem;
+    margin-top: 0.5rem;
+}
+
+.line {
+    position: relative;
+    top: -1.2rem;
+    left: 0.4rem;
+}
+
+.github {
+    margin: auto;
+    position: relative;
+    bottom: 0.1rem;
+    transition: transform 0.2s ease;
+}
+
+.github:hover {
+    transform: scale(1.1);
+}
+
+.linkedin {
+    margin: auto;
+    position: relative;
+    bottom: 0.1rem;
+    transition: transform 0.2s ease;
+}
+
+.linkedin:hover {
+    transform: scale(1.1);
+}
+
+#mail {
+    height: 1rem;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: -1rem;
+    transition: transform 0.2s ease;
+}
+
+#mail:hover {
+    transform: scale(1.05);
+}
+
+#mail-text {
+    margin-top: 0;
+    font-weight: 600;
+    text-align: center;
+    width: 60%;
+    font-size: 0.9rem;
+    position: relative;
+    top: -0.1rem;
+    text-decoration: none;
+}
+
+#mail-icon {
+    position: relative;
+}
+
+#cv {
+    transition: transform 0.2s ease;
+}
+
+#cv:hover {
+    transform: scale(1.2);
+}
+
+.project-link {
+    transition: transform 0.2s ease;
+}
+
+.project-link:hover {
+    transform: scale(1.1);
+}
+
+#projects {
+    margin-top: 1rem;
+}
+
+#projects-title,
+#publications-title {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+
+.project-image {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    height: 190px;
+    border-radius: 0.5rem 0 0 0.5rem;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+#publications .project-image {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    height: 170px;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+
+.project {
+    margin-left: 2rem;
+    margin-right: 4rem;
+    border: 1px solid rgb(224, 222, 222);
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+}
+
+
+
+@media (max-width: 1000px) {
+    .project {
+        display: block;
+        width: 80%;
+    }
+
+    .project-image {
+        border-radius: 0.5rem 0.5rem 0 0;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #publications .project-image {
+        width: 100%;
+        height: 170px;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 1000px) {
+    .links{
+        position: relative;
+        top: -0.5rem;
+    }
+}
+
+#overlay {display: none;}
+
+/* Icon visibility: light mode shows .icon-light, dark mode shows .icon-dark */
+.icon-wrap .icon-dark {
+    display: none;
+}
+
+html.dark-mode .icon-wrap .icon-light {
+    display: none;
+}
+
+html.dark-mode .icon-wrap .icon-dark {
+    display: inline;
+}
+
+/* Dark mode styles */
+html.dark-mode body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+html.dark-mode .container {
+    background-color: #1a1a1a;
+}
+
+html.dark-mode p {
+    color: #d0d0d0;
+}
+
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode h4 {
+    color: #e8e8e8;
+}
+
+html.dark-mode a {
+    color: #6ab7ff;
+}
+
+html.dark-mode a:hover {
+    color: #8cc8ff;
+}
+
+html.dark-mode .project {
+    border: 1px solid rgb(60, 60, 60);
+    background-color: #252525;
+}
+
+html.dark-mode .project-info {
+    color: #d0d0d0;
+}
+
+html.dark-mode .description {
+    color: #b0b0b0;
+}
+
+html.dark-mode #mail-text {
+    color: #d0d0d0;
+}
+
+html.dark-mode .line {
+    color: #b0b0b0;
+}
+
+html.dark-mode #publications .project-image {
+    background-color: white;
+}

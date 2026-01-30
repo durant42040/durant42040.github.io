@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan Hsiang</title>
+  <link rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+  <div class="container">
+    <div id="name">
+      <h1>Ryan Hsiang</h1>
+      <h2 class="name">項達均</h2>
+    </div>
+    <div id="about">
+      <div id="left">
+        <div class="about">
+          <p>
+            I am Ryan Hsiang, a senior from
+            <a href="https://www.ntu.edu.tw/" style="text-decoration: none;">National Taiwan University</a>
+            (NTU) majoring in Electrical Engineering.
+            My research interests lie in machine learning and its applications to physics, mathematics, and engineering. In the summer of 2025, I participated in the
+            <a href="https://sfp.caltech.edu/undergraduate-research/programs/surf" style="text-decoration: none;">Summer Undergraduate Research Fellowship</a>
+            (SURF) at
+            <a href="https://www.caltech.edu/" style="text-decoration: none;">Caltech</a>,
+            under the guidance of Prof.
+            <a href="https://tensorlab.cms.caltech.edu/users/anima/index.html" style="text-decoration: none;">Anima Anandkumar</a>
+            and Dr.
+            <a href="https://www.robertj1.com" style="text-decoration: none;">Robert Joseph George</a>.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Outside of research, I have extensive experience in software development through various side projects and courses.
+            In particular, I led a group of students at NTUEE to develop the
+            <a href="https://github.com/NTUEELightDance/LightDance-Editor" style="text-decoration: none;">LightDance Editor</a>,
+            a full-stack web application for light and dance choreography built with Rust, Blender, and MySQL.
+          </p>
+        </div>
+        <div class="info">
+          <a id="cv" href="/cv.pdf">
+            <span class="icon-wrap">
+              <img class="icon-light" src="assets/icons/cv.png" alt="cv" style="width: 22px;">
+              <img class="icon-dark" src="assets/icons/cv-light.png" alt="cv" style="width: 22px;">
+            </span>
+          </a>
+          <p class="line">/</p>
+          <a href="https://github.com/durant42040">
+            <span class="icon-wrap">
+              <img class="icon-light github" src="assets/icons/github.png" alt="GitHub" style="width: 18px;">
+              <img class="icon-dark github" src="assets/icons/github-light.png" alt="GitHub" style="width: 18px;">
+            </span>
+          </a>
+          <p class="line">/</p>
+          <a href="https://www.linkedin.com/in/ryan-hsiang">
+            <span class="icon-wrap">
+              <img class="icon-light linkedin" src="assets/icons/linkedin.png" alt="LinkedIn" style="width: 18px;">
+              <img class="icon-dark linkedin" src="assets/icons/linkedin-light.png" alt="LinkedIn" style="width: 18px;">
+            </span>
+          </a>
+          <p class="line">/</p>
+          <a id="mail" href="mailto:b11901040@ntu.edu.tw" style="text-decoration: none;">
+            <span class="icon-wrap" id="mail-icon">
+              <img class="icon-light" src="assets/icons/mail.png" alt="mail" style="width: 18px;">
+              <img class="icon-dark" src="assets/icons/mail-light.png" alt="mail" style="width: 18px;">
+            </span>
+            <p id="mail-text">b11901040@ntu.edu.tw</p>
+          </a>
+        </div>
+      </div>
+      <div id="right">
+        <img class="profile" src="assets/images/profile.png" alt="Profile picture">
+      </div>
+    </div>
+
+    <div id="projects">
+      <h3 id="projects-title">Projects</h3>
+      <div class="project">
+        <img src="assets/images/lightdance.png" alt="Project Image" class="project-image" loading="lazy">
+        <div class="project-info">
+          <h4>NTUEE Light Dance</h4>
+          <p class="description">Developed a full-stack web application using Rust, Blender, and MySQL to design and simulate light patterns and effects for 9 dancers and 18 props. Designed LED- and fiber-embedded costumes for each dancer, controlled via Raspberry Pi devices connected to a WebSocket server for real-time synchronization. Implemented dynamic moving light effects, such as a spinning orb and a large energy pulse, using JavaScript.</p>
+          <div class="links">
+            <a href="https://github.com/NTUEELightDance/LightDance-Editor" class="project-link">
+              <span class="icon-wrap">
+                <img class="icon-light" src="assets/icons/github.png" alt="GitHub" style="width: 22px;">
+                <img class="icon-dark" src="assets/icons/github-light.png" alt="GitHub" style="width: 22px;">
+              </span>
+            </a>
+            <a href="https://drive.google.com/file/d/13Mh13zdwgQuAHI1TSK-m7TzPZo8WxKoE/view?usp=sharing" class="project-link">
+              <span class="icon-wrap">
+                <img class="icon-light" src="assets/icons/youtube.png" alt="YouTube" style="width: 22px;">
+                <img class="icon-dark" src="assets/icons/youtube-light.png" alt="YouTube" style="width: 22px;">
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="publications">
+      <h3 id="publications-title">Publications</h3>
+      <div class="project">
+        <img src="assets/images/leandojo.png" alt="Project Image" class="project-image" loading="lazy">
+        <div class="project-info">
+          <h4>LeanDojo-v2</h4>
+          <p class="description">LeanDojo-v2 is an end-to-end framework for training, evaluating, and deploying AI-assisted theorem provers for Lean 4. It combines repository tracing, lifelong dataset management, retrieval-augmented agents, Hugging Face fine-tuning, and external inference APIs into one toolkit.</p>
+          <div class="links">
+            <a href="https://openreview.net/pdf?id=tnx1VvrcAn" class="project-link">
+              <span class="icon-wrap">
+                <img class="icon-light" src="assets/icons/file.png" alt="Paper" style="width: 23px;">
+                <img class="icon-dark" src="assets/icons/file-light.png" alt="Paper" style="width: 23px;">
+              </span>
+            </a>
+            <a href="https://github.com/lean-dojo/LeanDojo-v2" class="project-link">
+              <span class="icon-wrap">
+                <img class="icon-light" src="assets/icons/github.png" alt="GitHub" style="width: 22px;">
+                <img class="icon-dark" src="assets/icons/github-light.png" alt="GitHub" style="width: 22px;">
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/dark.js"></script>
+</body>
+</html>
