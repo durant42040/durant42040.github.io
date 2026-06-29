@@ -1,7 +1,7 @@
 /* App-wide styling */
-/* body {
-    background-color: #f3f1f1;
-} */
+body {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
 
 .container {
    max-width: 1200px;
@@ -256,6 +256,53 @@ h4 {
 }
 
 #overlay {display: none;}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: none;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: #35393f;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+.theme-icon-sun {
+    display: none;
+}
+
+.theme-icon-moon {
+    display: block;
+}
+
+html.dark-mode .theme-toggle {
+    color: #e8e8e8;
+}
+
+html.dark-mode .theme-toggle:hover {
+    background-color: #252525;
+}
+
+html.dark-mode .theme-icon-sun {
+    display: block;
+}
+
+html.dark-mode .theme-icon-moon {
+    display: none;
+}
 
 /* Icon visibility: light mode shows .icon-light, dark mode shows .icon-dark */
 .icon-wrap .icon-dark {
