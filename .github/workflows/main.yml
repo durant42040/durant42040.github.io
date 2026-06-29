@@ -18,7 +18,7 @@ jobs:
           cp ./assets/documents/* deploy/
           cp deploy/index.html deploy/404.html
 
-      - name: Deploy Project 🚀
+      - name: Deploy Project 
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: gh-pages
