@@ -178,7 +178,7 @@ button:focus-visible {
     border-top: 1px solid var(--line);
 }
 
-#publications {
+#projects {
     margin-top: 2.75rem;
 }
 
@@ -207,11 +207,6 @@ button:focus-visible {
     object-position: center;
 }
 
-#publications .project-image {
-    background: #ffffff;
-    object-fit: contain;
-}
-
 .project-info {
     display: flex;
     grid-column: 2;
@@ -234,6 +229,117 @@ button:focus-visible {
     gap: 0.55rem;
     margin-top: auto;
     padding-top: 0.65rem;
+}
+
+.paper {
+    display: grid;
+    grid-template-columns: 6.75rem minmax(0, 1fr);
+    align-items: center;
+    gap: 1.15rem;
+    padding: 0.9rem 1.05rem;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    background: var(--surface);
+}
+
+#publications .paper + .paper {
+    margin-top: 0.9rem;
+}
+
+.paper-thumb {
+    display: block;
+    width: 6.75rem;
+    height: 6.75rem;
+    border: 1px solid var(--line);
+    border-radius: 0.7rem;
+    background: #ffffff;
+    object-fit: contain;
+}
+
+.paper-project {
+    grid-template-columns: 10.75rem minmax(0, 1fr);
+    align-items: center;
+}
+
+.paper-project .paper-thumb {
+    width: 10.75rem;
+    height: 10.75rem;
+    background: #111;
+    object-fit: cover;
+}
+
+.paper-project .paper-title {
+    margin-top: 0;
+}
+
+.paper-body {
+    min-width: 0;
+}
+
+.paper-venue {
+    display: inline-flex;
+    margin: 0;
+    padding: 0.12rem 0.55rem;
+    border: 1px solid #c5daf5;
+    border-radius: 999px;
+    color: #3b6ea5;
+    background: #f3f8fd;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+}
+
+.paper-venue-science {
+    border-color: #b7e0c4;
+    color: #2f7a45;
+    background: #f2faf4;
+}
+
+.paper-title {
+    margin-top: 0.4rem;
+    font-size: 1.12rem;
+    font-weight: 650;
+    line-height: 1.35;
+}
+
+.paper-authors {
+    margin-top: 0.28rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.paper-authors strong {
+    color: var(--text);
+    font-weight: 650;
+}
+
+.paper-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.7rem;
+}
+
+.paper-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.32rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 0.55rem;
+    color: var(--text);
+    background: transparent;
+    font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+    font-size: 0.84rem;
+    font-weight: 450;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.paper-btn:hover {
+    background: rgba(0, 0, 0, 0.04);
 }
 
 .theme-toggle {
@@ -301,6 +407,26 @@ html.dark-mode .theme-toggle:hover {
     background-color: #252525;
 }
 
+html.dark-mode .paper-venue {
+    border-color: #3d5f86;
+    color: #9ec4ef;
+    background: #1d2a38;
+}
+
+html.dark-mode .paper-venue-science {
+    border-color: #3a6b48;
+    color: #a8d5b5;
+    background: #1a2e22;
+}
+
+html.dark-mode .paper-btn {
+    color: var(--text);
+}
+
+html.dark-mode .paper-btn:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
 @media (max-width: 760px) {
     .container {
         width: min(100% - 2rem, 42rem);
@@ -326,11 +452,30 @@ html.dark-mode .theme-toggle:hover {
         --thumb: 100%;
     }
 
-    .project-image,
-    #publications .project-image {
+    .project-image {
         width: 100%;
         height: auto;
         aspect-ratio: 1 / 1;
+    }
+
+    .paper {
+        grid-template-columns: 5.25rem minmax(0, 1fr);
+        gap: 0.85rem;
+        padding: 0.8rem;
+    }
+
+    .paper-thumb {
+        width: 5.25rem;
+        height: 5.25rem;
+    }
+
+    .paper-project {
+        grid-template-columns: 7.5rem minmax(0, 1fr);
+    }
+
+    .paper-project .paper-thumb {
+        width: 7.5rem;
+        height: 7.5rem;
     }
 
     .project-info {
@@ -341,7 +486,7 @@ html.dark-mode .theme-toggle:hover {
         padding: 1.15rem 1.25rem 1.05rem;
     }
 
-    #publications {
+    #projects {
         margin-top: 2.5rem;
     }
 }
